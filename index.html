@@ -1,72 +1,178 @@
 <!DOCTYPE html>
-<html lang="sq">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edona Krasniqi | CV Online</title>
+    <title>Edona Krasniqi | Online CV</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Your existing CSS */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0066cc;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            color: #0066cc;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        /* Navigation menu styles */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .main-nav {
+            background: #e6e6e6;
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-nav li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .main-nav a {
+            color: #0066cc;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .main-nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <img src="assets/img/profile.jpg" alt="Edona Krasniqi" class="profile-img">
         <h1>Edona Krasniqi</h1>
-        <p>Ligjëruese në Shkencat Kompjuterike dhe Shkencat Sociale</p>
-        <p>Kolegji AAB, Prishtinë, Republika e Kosovës</p>
-        <p><a href="mailto:edona.krasniqi@universitetiaab.com">edona.krasniqi@universitetiaab.com</a></p>
+        <p>Lecturer in Computer Science and Social Sciences
+        at <a href="https://www.aab-edu.net" target="_blank" class="web-link">Kolegji AAB</a> 
+        <p>AAB College, Prishtina, Republic of Kosovo</p>
+<p><a href="mailto:edona.krasniqi@aab-edu.net" class="email-link">edona.krasniqi@aab-edu.net</a></p>
+
     </header>
 
+    <!-- Navigation Menu -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="#profile">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <section>
-            <h2>Profili</h2>
-            <p>Edona Krasniqi është kandidate për doktoraturë në fushën e Shkencave Kompjuterike, me fokus kërkimi në Realitetin e Zgjeruar (XR), Internetin e Gjërave (IoT) dhe Mësimin e Makinerive, për përmirësimin e menaxhimit të fatkeqësive dhe ndërgjegjësimit.</p>
+        <section id="profile">
+            <h2>About me</h2>
+            <p>Edona Krasniqi is a PhD candidate in the field of Computer Science, with research focus on Extended Reality (XR), Internet of Things (IoT), and Machine Learning for enhancing disaster management and awareness.</p>
         </section>
 
-        <section>
-            <h2>Edukimi</h2>
+        <section id="education">
+            <h2>Education</h2>
             <ul>
-                <li>Bachelor në Shkenca Kompjuterike – SEEU, Tetovë (2008)</li>
-                <li>Master në Menaxhim të Sistemeve të Informacionit – University of Salford, Manchester (2018)</li>
-                <li>Master në Aplikimin e TIK-ut në Mësimdhënie – SEEU (2017–2018)</li>
-                <li>Doktoraturë në Shkenca Kompjuterike – SEEU (në përfundim)</li>
+                <li>Bachelor in Computer Science – SEEU, Tetovo (2008)</li>
+                <li>Master in Information Systems Management – University of Salford, Manchester (2018)</li>
+                <li>Master in ICT Application in Teaching – SEEU (2017–2018)</li>
+                <li>PhD in Computer Science – SEEU (ongoing)</li>
+            </ul>
+        </section>
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <ul>
+                <li>Lecturer – AAB College (2022–present)</li>
+                <li>ICT Teacher – "Kuvendi i Arbërit" High School, Ferizaj (2016–present)</li>
+                <li>Database Manager – KBR & Fluor Corporation (2008–2015)</li>
+               
+            </ul>
+            <p><strong>Courses Taught:</strong></p>
+            <ul>
+                <li>Programming for Business Analysis</li>
+                <li>Web Services Programming</li>
+                <li>Database Security</li>
+                <li>Fundamentals of Computer Systems</li>
+                <li>Web Programming</li>
+                <li>ICT for Social Sciences</li>
             </ul>
         </section>
 
-        <section>
-            <h2>Eksperienca Profesionale</h2>
-            <ul>
-                <li>Menaxhere e Bazave të të Dhënave – KBR & Fluor Corporation (2008–2015)</li>
-                <li>Mësimdhënëse e TIK – Shkolla e mesme "Kuvendi i Arbërit", Ferizaj (2016–sot)</li>
-                <li>Ligjëruese – Kolegji AAB (2022–sot)</li>
-                <li>Bashkëthemeluese – KED Innovation Center, Ferizaj (2023)</li>
-            </ul>
-            <p><strong>Lëndët e Ligjëruara:</strong></p>
-            <ul>
-                <li>Programimi për Analizën e Biznesit</li>
-                <li>Programimi i Web Shërbimeve</li>
-                <li>Siguria e Bazave të të Dhënave</li>
-                <li>Bazat e Sistemeve Kompjuterike</li>
-                <li>Programimi Web</li>
-                <li>TIK për Shkencat Sociale</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Publikimet</h2>
+        <section id="publications">
+            <h2>Publications</h2>
             <ul>
                 <li>Different Methods of Distribution Data in the Cloud — MECO 2018</li>
                 <li>An Evaluation of e-Education System in Kosovo — MECO 2019</li>
                 <li>World Happiness Dataset: Advanced Data Analysis — MECO 2023</li>
-                <li><strong>MetroXRAINE 2025 (i pranuar):</strong><br>
-                    “A Survey on Extended Reality in Disaster Management: Integrating XR, IoT, and Machine Learning for Enhanced Situational Awareness”
+                <li>
+                    A Survey on Extended Reality in Disaster Management: Integrating XR, IoT, and Machine Learning for Enhanced Situational Awareness - MetroXRAINE 2025
                 </li>
             </ul>
         </section>
 
-        <section>
-            <h2>Kontakt</h2>
-            <p>Email: <a href="mailto:edona.krasniqi@universitetiaab.com">edona.krasniqi@universitetiaab.com</a></p>
-            <p>Vendbanimi: Ferizaj, Kosovë</p>
-            <p><a href="assets/docs/CV.pdf" target="_blank">Shkarko CV në PDF</a></p>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:edona.krasniqi@aab-edu.net">edona.krasniqi@aab-edu.net</a></p>
+         
         </section>
     </main>
 
