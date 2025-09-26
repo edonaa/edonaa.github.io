@@ -46,6 +46,25 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Custom link styles */
+.email-link {
+    color: #d6336c; 
+    font-weight: bold;
+}
+
+.web-link {
+    color: #d6336c; 
+    font-weight: bold;
+}
+
+
+.email-link:hover,
+.web-link:hover {
+    text-decoration: underline;
+    opacity: 0.85;
+}
+
+
 footer {
     text-align: center;
     padding: 20px;
