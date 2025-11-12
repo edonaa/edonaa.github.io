@@ -1,174 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edona Krasniqi | Online CV</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Your existing CSS */
-        body {
-            font-family: 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #E8E8E8;
-            color: #333;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edona Krasniqi | CV</title>
+  <style>
+    :root {
+      --bg-dark: #0B3040;
+      --accent-green: #6CDD31;
+      --accent-blue: #0066cc;
+    }
 
-        header {
-            background: #088DF2;
-            color: white;
-            padding: 30px;
-            text-align: center;
-        }
+    /* Reset i thjeshtë */
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-            object-fit: cover;
-        }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: var(--bg-dark);
+      color: #e6f4ff;
+    }
 
-        main {
-            padding: 20px;
-            max-width: 900px;
-            margin: auto;
-            background: white;
-        }
+    /* KONTEJNER I PËRBASHKËT – gjithçka brenda këtij */
+    .page {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        section {
-            margin-bottom: 40px;
-        }
+    /* HERO */
+    .hero {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
 
-        h2 {
-            color: #0066cc;
-        }
+    .hero-left {
+      flex: 0 0 220px;
+      
+    }
 
-        a {
-            color: #14364A;
-            text-decoration: none;
-        }
+    .vr-frame {
+      position: relative;
+      border: 10px solid transparent;
+      border-radius: 24px;
+      background-image:
+        linear-gradient(#0B3040, #0B3040),
+        linear-gradient(135deg, var(--accent-green), var(--accent-blue));
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      overflow: hidden;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .vr-frame img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #14364A;
-            color: #E8E8E8;
-        }
+    .badge {
+      position: absolute;
+      bottom: 18px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+      text-shadow: 0 0 8px rgba(0,0,0,.4);
+      letter-spacing: .06em;
+    }
+    .badge span {
+      display: block;
+      font-size: 0.7rem; 
+  letter-spacing: 0.05em;
+    }
+    .badge img {
+      width: 100px;
+      margin: 4px auto;
+      display: block;
+    }
 
-        /* Navigation menu styles */
-        html {
-            scroll-behavior: smooth;
-        }
+    .hero-right {
+      flex: 1;
+    }
+    .name {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .title {
+      color: #b9cad4;
+      margin-bottom: 3px;
+    }
+    .contact a {
+      color: #e6f4ff;
+      text-decoration: none;
+      font-weight: 500;
+    }
 
-        .main-nav {
-            background: #14364A;
-            padding: 10px 0;
-            text-align: center;
-            border-bottom: 1px solid #14364A;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+    .hero-list {
+      margin-top: 20px;
+      display: grid;
+      gap: 14px;
+    }
+    .hero-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .hero-icon {
+      width: 12px;
+      height: 20px;
+      background: var(--accent-blue);
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+      margin-top: 3px;
+    }
+    .hero-item-title {
+      color: var(--accent-green);
+      font-weight: 700;
+      font-size: .9rem;
+    }
+    .hero-item-text {
+      font-size: .8rem;
+      color: #d0dbe1;
+    }
 
-        .main-nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
+    /* NAV e thjeshtë, brenda të njëjtit align */
+    nav {
+      margin-top: 25px;
+      margin-bottom: 0;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: #e6f4ff;
+      text-decoration: none;
+      font-size: .9rem;
+      font-weight: 500;
+    }
+    nav a:hover {
+      color: #fff;
+    }
 
-        .main-nav li {
-            display: inline-block;
-            margin: 0 15px;
-        }
+    /* KARTA (MAIN) */
+  main {
+  margin-top: 20px;
+  background: #0f384a;
+  padding: 32px 26px;
+  border-radius: 16px;
 
-        .main-nav a {
-            color: #6CDD31;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 16px;
-        }
+  /* kufi gradient hollë si te foto */
+  border: 10px solid;
+  border-image: linear-gradient(135deg, var(--accent-green), var(--accent-blue)) 1;
+}
 
-        .main-nav a:hover {
-            text-decoration: underline;
-        }
-    </style>
+/* lista si te hero */
+.main-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.main-list-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.main-list-icon {
+  width: 12px;
+  height: 20px;
+  background: var(--accent-blue);
+  clip-path: polygon(0 50%, 100% 0, 100% 100%);
+  margin-top: 3px;
+}
+
+.main-list-content h3 {
+  margin: 0;
+  color: var(--accent-green);
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+.main-list-content p {
+  margin: 2px 0 0;
+  color: #dce6eb;
+  font-size: 0.82rem;
+}
+
+
+    section {
+      margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+      padding-bottom: 18px;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--accent-green);
+      text-transform: uppercase;
+      font-size: .95rem;
+      border-left: 5px solid var(--accent-blue);
+      padding-left: 10px;
+      letter-spacing: .04em;
+    }
+
+    main p {
+      margin-top: 0;
+      line-height: 1.6;
+      color: #dce6eb;
+      font-size: .9rem;
+    }
+
+    main ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    main ul li {
+      background: rgba(5, 21, 29, 0.3);
+      margin-bottom: 10px;
+      padding: 9px 10px;
+      border-radius: 8px;
+      border-left: 4px solid var(--accent-blue);
+      font-size: .9rem;
+    }
+
+    footer {
+      text-align: center;
+      color: #8fa5b0;
+      font-size: .8rem;
+      padding: 25px 0 30px;
+    }
+
+    /* Responsive */
+    @media (max-width: 850px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero-left {
+        width: 270px;
+      }
+    }
+    @media (max-width: 500px) {
+      main {
+        padding: 24px 16px;
+      }
+      .name { font-size: 1.6rem; }
+    }
+
+    /* Karta të vogla në main (me stil modern si hero) */
+.main-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+.main-card {
+  background: rgba(15, 56, 74, 0.5);
+  border: 1.5px solid transparent;
+  border-image: linear-gradient(135deg, var(--accent-green), var(--accent-blue)) 1;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.main-card-title {
+  color: var(--accent-green);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+
+.main-card-text {
+  color: #dce6eb;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+  </style>
 </head>
 <body>
 
-    <header>
-        <img src="assets/img/profile.jpg" alt="Edona Krasniqi" class="profile-img">
-        <h1>Edona Krasniqi</h1>
-        <p>Lecturer in Computer Science and Social Sciences
-        at <a href="https://www.aab-edu.net" target="_blank" class="web-link">Kolegji AAB</a> 
-        <p>AAB College, Prishtina, Republic of Kosovo</p>
-<p><a style="color:#6CDD31" href="mailto:edona.krasniqi@aab-edu.net" class="email-link">edona.krasniqi@aab-edu.net</a></p>
+  <div class="page">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <div class="vr-frame">
+          <!-- vendos foton tënde këtu -->
+          <img src="assets/img/profile.jpg" alt="VR person">
+          <div class="badge">
+            <span>XR FOR</span>
+            <img src="assets/img/xr.png" alt="XR logo">
+            <span>DISASTER MANAGEMENT</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="name">Edona Krasniqi</div>
+        <div class="title">Lecturer at the Departments of Computer Science and Social Sciences</div>
+        <div class="title">AAB College, Prishtina</div>
+        <div class="contact">
+          <a href="mailto:edona.krasniqi@aab-edu.net">edona.krasniqi@aab-edu.net</a>
+        </div>
 
-    </header>
+        <div class="hero-list">
+          <div class="hero-item">
+            <div class="hero-icon"></div>
+            <div>
+              <div class="hero-item-title">XR · IoT · Machine Learning</div>
+              <div class="hero-item-text">Research for disaster management</div>
+            </div>
+          </div>
+          <div class="hero-item">
+            <div class="hero-icon"></div>
+            <div>
+              <div class="hero-item-title">Academic work</div>
+              <div class="hero-item-text">Teaching CS and social sciences</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- Navigation Menu -->
-    <nav class="main-nav">
-        <ul>
-            <li><a href="#profile">About</a></li>
-            <li><a href="#education">Education</a></li>
-    
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- NAV -->
+    <nav>
+      <ul>
+        <li><a href="#profile">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
 
-    <main>
-        <section id="profile">
-            <h2>About me</h2>
-            <p><strong>PhD candidate in the field of Computer Science, with research focus on Extended Reality (XR), Internet of Things (IoT), and Machine Learning for enhancing disaster management and awareness.</strong></p>
-            <p>I have a background in computer science and started my career as a Database Project Manager, where I gained practical experience working with data systems. This sparked my interest in data analytics and machine learning, using data to understand complex problems and find solutions.</p>
-            <p>Currently, I’m pursuing a PhD researching how technologies like Extended Reality (XR), IoT, and AI can improve disaster management by helping people make better, faster decisions in emergencies.</p>
-            <p>As a Lecturer at AAB College, I teach courses focused on data analytics and programming, aiming to equip students with practical skills that are relevant in today’s tech-driven world. I believe in making learning engaging and applicable, so students can connect what they study with real-life challenges.</p>
-            <p>I’m passionate about exploring how immersive technologies and intelligent systems can work together to create smarter, more adaptive solutions. Whether through teaching or research, my goal is to help shape technology that makes a positive impact.</p>
-        </section>
+    <!-- MAIN (karta) -->
+   <main>
+  <section id="profile">
+    <h2>About me</h2>
+    <p>PhD candidate in the field of Computer Science, with research focus on Extended Reality (XR), Internet of Things (IoT), and Machine Learning for enhancing disaster management and awareness.</p>
 
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-            	<li>PhD in Computer Science – <strong>SEEU (ongoing)</strong></li>
-            	<li>Master in Information Systems Management – <strong>University of Salford, Manchester (2018)</strong></li>
-                <li>Master in ICT Application in Teaching – <strong>SEEU (2017–2018)</strong></li>
-                <li>Bachelor in Computer Science – <strong>SEEU, Tetovo (2008)</strong></li>
-            </ul>
-        </section>
+<p>I have a background in computer science and started my career as a Database Project Manager, where I gained practical experience working with data systems. This sparked my interest in data analytics and machine learning, using data to understand complex problems and find solutions.</p>
 
+<p>Currently, I’m pursuing a PhD researching how technologies like Extended Reality (XR), IoT, and AI can improve disaster management by helping people make better, faster decisions in emergencies.</p>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul>
-            	<li>
-                    From Data to Decisions - An XR Platform for Crisis Communication and Situational Awareness - <strong>IDRC 2025</strong>
-                </li>
-                <li>
-                    A Survey on Extended Reality in Disaster Management: Integrating XR, IoT, and Machine Learning for Enhanced Situational Awareness - <strong>MetroXRAINE 2025</strong>
-                </li>
-                <li>World Happiness Dataset: Advanced Data Analysis — <strong>MECO 2023</strong></li>
-                <li>An Evaluation of e-Education System in Kosovo — <strong>MECO 2019</strong></li>
-                <li>Different Methods of Distribution Data in the Cloud — <strong>MECO 2018</strong></li>
-                
-            </ul>
-        </section>
+<p>As a Lecturer at AAB College, I teach courses focused on data analytics and programming, aiming to equip students with practical skills that are relevant in today’s tech-driven world. I believe in making learning engaging and applicable, so students can connect what they study with real-life challenges.</p>
 
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:edona.krasniqi@aab-edu.net">edona.krasniqi@aab-edu.net</a></p>
-         
-        </section>
-    </main>
+<p>I’m passionate about exploring how immersive technologies and intelligent systems can work together to create smarter, more adaptive solutions. Whether through teaching or research, my goal is to help shape technology that makes a positive impact.</p>
+  </section>
 
-    <footer>
-        <p>© 2025 Edona Krasniqi</p>
-    </footer>
+  <section id="education">
+    <h2>Education</h2>
+    <div class="main-blocks">
+      <div class="main-card">
+        <div class="main-card-title">PhD in Computer Science – SEEU</div>
+        <div class="main-card-text">Ongoing</div>
+      </div>
+      <div class="main-card">
+        <div class="main-card-title">Master in Information Systems Management</div>
+        <div class="main-card-text">University of Salford, 2018</div>
+      </div>
+      <div class="main-card">
+        <div class="main-card-title">Master in ICT Application in Teaching</div>
+        <div class="main-card-text">SEEU, 2017–2018</div>
+      </div>
+      <div class="main-card">
+        <div class="main-card-title">Bachelor in Computer Science</div>
+        <div class="main-card-text">SEEU, Tetovo, 2008</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <div class="main-blocks">
+      <div class="main-card">
+        <div class="main-card-title">A Survey on Extended Reality in Disaster Management</div>
+        <div class="main-card-text">MetroXRAINE 2025</div>
+      </div>
+      <div class="main-card">
+        <div class="main-card-title">World Happiness Dataset: Advanced Data Analysis</div>
+        <div class="main-card-text">MECO 2023</div>
+      </div>
+      <div class="main-card">
+        <div class="main-card-title">An Evaluation of e-Education System in Kosovo</div>
+        <div class="main-card-text">MECO 2019</div>
+      </div>
+      <div class="main-card">
+        <div class="main-card-title">Different Methods of Distribution Data in the Cloud</div>
+        <div class="main-card-text">MECO 2018</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:edona.krasniqi@aab-edu.net">edona.krasniqi@aab-edu.net</a></p>
+  </section>
+</main>
+
+  </div>
+
+  <footer>
+    © 2025 Edona Krasniqi
+  </footer>
+
 </body>
 </html>
